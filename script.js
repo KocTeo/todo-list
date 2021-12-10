@@ -1,5 +1,5 @@
-let getButton = document.querySelector('#criar-tarefa');
-console.log(getButton);
+let getButtonAdd = document.querySelector('#criar-tarefa');
+console.log(getButtonAdd);
 
 let getList = document.querySelector('ol');
 console.log(getList);
@@ -16,7 +16,7 @@ function adicionaTarefa () {
     addClickList();
 }
 
-getButton.addEventListener('click', adicionaTarefa);
+getButtonAdd.addEventListener('click', adicionaTarefa);
 
 
 let getItemList = document.getElementsByTagName('li');
@@ -34,3 +34,14 @@ function addClickList () {
     getItemList[i].addEventListener('click', changeBackgroudColor);
     }
 }
+
+function clearAll () {
+    for (let i = 0; i < getItemList.length; i += 0){
+        getList.firstChild.remove();
+    }
+}
+
+let getButtonClear = document.querySelector('#apaga-tudo');
+console.log(getButtonClear);
+
+getButtonClear.addEventListener('click', clearAll);
