@@ -1,0 +1,21 @@
+#criar-tarefa {
+    border-radius: 10px;
+    width: 120px;
+    background-color: rgb(72, 160, 243);
+    height: 25px;
+    color: white;
+    font-family: monospace;
+}
+
+#apaga-tudo {
+    border-radius: 10px;
+    width: 120px;
+    background-color: rgb(148, 23, 23);
+    height: 25px;
+    color: white;
+    font-family: monospace;
+}
+
+li {
+    background-color: red;
+}

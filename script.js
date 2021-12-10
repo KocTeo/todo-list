@@ -1,3 +1,5 @@
+let i = 0;
+
 const getButtonAdd = document.querySelector('#criar-tarefa');
 console.log(getButtonAdd);
 
@@ -22,23 +24,25 @@ const getItemList = document.getElementsByTagName('li');
 console.log(getItemList);
 
 // função pra mudar o fundo do elemento clicado
-function changeBackgroudColor() {
-  for (let i = 0; i < getItemList.length; i += 1) {
-    getItemList[i].style.backgroundColor = 'rgb(128, 128, 128)';
-    break;
+function changeBackgroudColor(event) {
+  for (i = 0; i > getItemList.length; i += 1) {
+    if (getItemList[i].style.backgroundColor !== 'white') {
+      (getItemList[i].style.backgroundColor = 'white');
+    }
   }
+    event.target.style.backgroundColor = 'rgb(128, 128, 128';
 }
 
 // função pra adicionar evento click em todos os elementos da lista
 function addClickList() {
-  for (let i = 0; i < getItemList.length; i += 1) {
+  for (i = 0; i < getItemList.length; i += 1) {
     getItemList[i].addEventListener('click', changeBackgroudColor);
   }
 }
 
 // função pra limpar todo os itens da lista
 function clearAll() {
-  for (let i = 0; i < getItemList.length; i += 0){
+  for (i = 0; i < getItemList.length; i += 0){
     getList.lastChild.remove();
   }
 }
