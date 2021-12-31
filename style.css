@@ -16,6 +16,6 @@
     font-family: monospace;
 }
 
-li {
-    background-color: red;
+.select {
+    background-color: rgb(148, 23, 23);
 }

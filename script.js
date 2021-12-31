@@ -15,6 +15,7 @@ function adicionaTarefa() {
   getList.appendChild(createLi);
   createLi.innerText = getInput.value;
   getInput.value = '';
+  createLi.className = 'item';
   addClickList();
 }
 
@@ -23,22 +24,32 @@ getButtonAdd.addEventListener('click', adicionaTarefa);
 const getItemList = document.getElementsByTagName('li');
 console.log(getItemList);
 
-// função pra mudar o fundo do elemento clicado
-function changeBackgroudColor(event) {
-  for (i = 0; i > getItemList.length; i += 1) {
-    if (getItemList[i].style.backgroundColor !== 'white') {
-      (getItemList[i].style.backgroundColor = 'white');
-    }
-  }
-    event.target.style.backgroundColor = 'rgb(128, 128, 128';
-}
 
 // função pra adicionar evento click em todos os elementos da lista
 function addClickList() {
   for (i = 0; i < getItemList.length; i += 1) {
-    getItemList[i].addEventListener('click', changeBackgroudColor);
+    getItemList[i].addEventListener('click', addClassSelect);
   }
 }
+
+// função pra mudar o fundo do elemento clicado
+function addClassSelect(event) {
+ // trecho de código inspirado no código de Tomas Breuckmann
+  if (classSelect.length == 0) {
+    event.target.classList.add('select')
+  } else {
+    document.querySelector('.select').classList.remove('select')
+    event.target.classList.add('select')
+  }
+  // *******************************************************
+  for(i = 0; i < itens.length; i += 1){
+    itens[i].style.backgroundColor = 'white';
+  }
+  event.target.style.backgroundColor = 'rgb(128,128,128)';
+}
+let itens = document.getElementsByClassName('item')
+let classSelect = document.getElementsByClassName('select');
+
 
 // função pra limpar todo os itens da lista
 function clearAll() {
