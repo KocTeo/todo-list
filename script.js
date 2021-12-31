@@ -29,6 +29,7 @@ console.log(getItemList);
 function addClickList() {
   for (i = 0; i < getItemList.length; i += 1) {
     getItemList[i].addEventListener('click', addClassSelect);
+    getItemList[i].addEventListener('dblclick', tarefaCompleta);
   }
 }
 
@@ -62,3 +63,15 @@ const getButtonClear = document.querySelector('#apaga-tudo');
 console.log(getButtonClear);
 
 getButtonClear.addEventListener('click', clearAll);
+
+// função riscar item completo
+function tarefaCompleta (event) {
+  // código feito na mesma inspiração da função de selecionar o item
+  if (event.target.classList.contains('completed')===true) {
+    event.target.classList.remove('completed');
+    event.target.style.textDecoration = 'none';
+  } else {
+  event.target.classList.add('completed');
+  event.target.style.textDecoration = 'line-through solid rgb(0, 0, 0)';
+  }
+}
