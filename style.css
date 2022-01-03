@@ -16,6 +16,11 @@
     font-family: monospace;
 }
 
-.select {
-    background-color: rgb(148, 23, 23);
+#remover-finalizados{
+    border-radius: 10px;
+    width: 150px;
+    background-color: rgb(110, 160, 243);
+    height: 25px;
+    color: white;
+    font-family: monospace;
 }

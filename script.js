@@ -54,7 +54,7 @@ let classSelect = document.getElementsByClassName('select');
 
 // função pra limpar todo os itens da lista
 function clearAll() {
-  for (i = 0; i < getItemList.length; i += 0){
+  for (i = getItemList.length - 1; i >= 0; i -= 1){
     getList.lastChild.remove();
   }
 }
@@ -73,5 +73,17 @@ function tarefaCompleta (event) {
   } else {
   event.target.classList.add('completed');
   event.target.style.textDecoration = 'line-through solid rgb(0, 0, 0)';
+  }
+}
+
+let listaFeitos = document.getElementsByClassName('completed');
+let buttonClearComplete = document.getElementById('remover-finalizados');
+buttonClearComplete.addEventListener('click', clearComplete);
+
+// função remover completos
+function clearComplete() {
+  for (i = listaFeitos.length - 1; i >= 0; i -= 1){
+    // acessar o elemento pai e remover o elemento filho
+    console.log(listaFeitos[i].parentElement.removeChild(listaFeitos[i]));
   }
 }
