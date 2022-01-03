@@ -84,6 +84,14 @@ buttonClearComplete.addEventListener('click', clearComplete);
 function clearComplete() {
   for (i = listaFeitos.length - 1; i >= 0; i -= 1){
     // acessar o elemento pai e remover o elemento filho
-    console.log(listaFeitos[i].parentElement.removeChild(listaFeitos[i]));
+    listaFeitos[i].parentElement.removeChild(listaFeitos[i]);
   }
+}
+
+let buttonApagaSelect = document.getElementById('remover-selecionado');
+buttonApagaSelect.addEventListener('click', clearSelect);
+
+// remover selecionado
+function clearSelect () {
+  classSelect[0].parentElement.removeChild(classSelect[0]);
 }
