@@ -3,6 +3,7 @@ const input = document.querySelector('#texto-tarefa');
 const listOl = document.querySelector('#lista-tarefas');
 const buttonClear = document.querySelector('#apaga-tudo');
 const buttonRemoveComplete = document.querySelector('#remover-finalizados');
+const buttonSaveList = document.querySelector('#salvar-tarefas');
 
 buttonAddQuest.addEventListener('click', () => {
   const li = document.createElement('li');
@@ -43,7 +44,19 @@ function removeComplete() {
   });
 }
 
+function saveList() {
+  localStorage.setItem('doList', listOl.innerHTML);
+}
+
 listOl.addEventListener('click', changeColor);
 listOl.addEventListener('dblclick', completedClass);
 buttonClear.addEventListener('click', clearAll);
 buttonRemoveComplete.addEventListener('click', removeComplete);
+buttonSaveList.addEventListener('click', saveList);
+
+function getSaveList() {
+  const list = localStorage.getItem('doList');
+  listOl.innerHTML = list;
+}
+
+window.onload = getSaveList;
