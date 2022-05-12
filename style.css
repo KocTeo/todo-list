@@ -5,11 +5,97 @@
   font-family: monospace;
 }
 
-#cabecalho {
+body {
+  background-color: rgb(69 , 182 , 69);
+  height: 30vw;
+}
+
+.main-container {
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 15px;
+  margin: 50px;
+  width: 80vw;
+}
+
+.input-quest {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+}
+
+.text-quest {
+  padding: 2px;
+  width: 200px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.add {
+  background-color: rgb(0 , 121 , 190);
+  color: white;
+  margin-left: 10px;
+  padding: 3px;
+  width: 150px;
+}
+
+.delete-all {
+  background-color: rgb(190 , 42 , 42);
+  color: white;
+  padding: 3px;
+  margin-top: 20px;
+  width: 120px;
+}
+
+.delete-complete {
+  background-color: rgb(0 , 121 , 190);
+  color: white;
+  padding: 3px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.save-list {
+  background-color: rgb(44 , 165 , 50);
+  color: white;
+  padding: 3px;
+  margin-top: 20px;
+  width: 120px;
+}
+
+.move-btn {
+  background-color: rgb(204 , 150 , 33);
+  color: white;
+  padding: 3px;
+  margin-top: 20px;
+  width: 40px;
+}
+
+.delete-selected {
+  background-color: rgb(170 , 29 , 29);
+  color: white;
+  padding: 3px;
+  margin-top: 20px;
+  width: 40px;
+}
+
+.cabecalho {
+  margin: 20px;
+}
+
+.tarefa {
+  list-style: '-';
+}
+
+.todo-list {
+  margin: 8px;
+}
+
+h3 {
+  margin: 20px;
 }
 
 main {

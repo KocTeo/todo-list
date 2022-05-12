@@ -5,6 +5,8 @@ const buttonClear = document.querySelector('#apaga-tudo');
 const buttonRemoveComplete = document.querySelector('#remover-finalizados');
 const buttonSaveList = document.querySelector('#salvar-tarefas');
 const buttonRemoveSelected = document.querySelector('#remover-selecionado');
+const buttonUp = document.querySelector('#mover-cima');
+const buttonDown = document.querySelector('#mover-baixo');
 
 function saveList() {
   localStorage.setItem('doList', listOl.innerHTML);
@@ -61,12 +63,24 @@ function removeSelected() {
   });
 }
 
+function upQuest() {
+  const listLi = document.querySelectorAll('li');
+  console.log(listLi);
+}
+
+function downQuest() {
+  const listLi = document.querySelectorAll('li');
+  console.log(listLi);
+}
+
 listOl.addEventListener('click', changeColor);
 listOl.addEventListener('dblclick', completedClass);
 buttonClear.addEventListener('click', clearAll);
 buttonRemoveComplete.addEventListener('click', removeComplete);
 buttonSaveList.addEventListener('click', saveList);
 buttonRemoveSelected.addEventListener('click', removeSelected);
+buttonUp.addEventListener('click', upQuest);
+buttonDown.addEventListener('click', downQuest);
 
 function getSaveList() {
   const list = localStorage.getItem('doList');

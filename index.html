@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="cabecalho">
-        <h1>Minha Lista de Tarefas</h1>
-        <h3 id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</h3>
-    </header>
-    <main>
-        <input type="text" id="texto-tarefa">
-        <ol id="lista-tarefas"></ol>
-        <button id="criar-tarefa">Adicionar Tarefa</button>
-        <button id="apaga-tudo">Apaga Tudo</button>
-        <button id="remover-finalizados">Remove Completos</button>
-        <button id="salvar-tarefas">Salvar Lista</button>
-        <button id="remover-selecionado">Remove Selecionado</button>
-    </main>
+    <div class="main-container">
+      <header id="cabecalho" class="cabecalho">
+          <h1>Minha Lista de Tarefas</h1>
+      </header>
+      <h3 id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</h3>
+      <main>
+          <div class="input-quest">
+            <input type="text" id="texto-tarefa" class="text-quest">
+            <button id="criar-tarefa" class="btn add">Adicionar Tarefa</button>
+          </div>
+          <ol id="lista-tarefas" class="todo-list"></ol>
+          <button id="apaga-tudo" class="btn delete-all">Apaga Tudo</button>
+          <button id="remover-finalizados" class="btn delete-complete">Remove Completos</button>
+          <button id="salvar-tarefas" class="btn save-list">Salvar Lista</button>
+          <button id="mover-cima" class="btn move-btn">↑</button>
+          <button id="mover-baixo" class="btn move-btn">↓</button>
+          <button id="remover-selecionado" class="btn delete-selected">X</button>
+      </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
